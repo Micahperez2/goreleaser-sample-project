@@ -4,6 +4,13 @@ pipeline {
         GITHUB_TOKEN = "${GITHUB_TOKEN}"
     }
     stages {
+        stage('Module') {
+            steps {
+                echo 'Create go module...'
+                sh 'go mod init'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building...'
