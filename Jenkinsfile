@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GITHUB_TOKEN = credentials('GITHUB_TOKEN')
+        GITHUB_TOKEN = credentials('goreleaser')
     }
     stages {
         stage('Build') {
